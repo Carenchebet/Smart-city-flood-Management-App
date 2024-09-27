@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "111868585506",
+    "project_id": "floodmanager-96fe1",
+    "storage_bucket": "floodmanager-96fe1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:111868585506:android:bc7f31c178942ea0308c7b",
+        "android_client_info": {
+          "package_name": "ft.cn.floodmanager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx34DKfliU7hyu1Zu3SzbYHZ8AIQ1XxHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

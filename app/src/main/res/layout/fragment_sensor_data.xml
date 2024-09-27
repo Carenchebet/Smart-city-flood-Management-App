@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#009688"
+    android:background="@drawable/round_corners"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/textHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Humidity: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/textWaterLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Water Level: "
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: "
+        android:textSize="18sp"/>
+</LinearLayout>

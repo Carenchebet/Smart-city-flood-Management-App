@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FloodManager</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_users">users\n</string>
+    <string name="nav_sensor_data">Sensor Data</string>
+    <string name="nav_reports">Reports\n</string>
+</resources>
