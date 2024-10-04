@@ -10,6 +10,12 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import android.util.Patterns
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import ft.cn.floodmanager.cityofficial.CityOfficialMainActivity
+import ft.cn.floodmanager.dataanalyst.DataAnalystMainActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -73,8 +79,33 @@ class MainActivity : AppCompatActivity() {
     private fun updateUI(user: FirebaseUser?) {
         user?.let {
             // Example of moving to the next activity after login
-            startActivity(Intent(this, DashboardActivity::class.java))
-            finish() // Close the current activity
+            val id=user.uid.toString()
+            FirebaseDatabase.getInstance().reference.child("users").child(id).child("userRole").addValueEventListener(object:
+                ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val role=snapshot.value
+                    if(role=="admin")
+                    {
+                        startActivity(Intent(this@MainActivity, DashboardActivity::class.java))
+                        finish() // Close the current activity
+                    }
+                    else if(role=="cityofficial")
+                    {
+                        startActivity(Intent(this@MainActivity, CityOfficialMainActivity::class.java))
+                        finish() // Close the current activity
+                    }
+                    else if(role=="dataanalyst")
+                    {
+                        startActivity(Intent(this@MainActivity, DataAnalystMainActivity::class.java))
+                        finish() // Close the current activity
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+
+                }
+
+            })
         }
     }
 }

@@ -12,6 +12,12 @@
         android:theme="@style/Theme.FloodManager"
         tools:targetApi="31">
         <activity
+            android:name=".dataanalyst.DataAnalystMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cityofficial.CityOfficialMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".DashboardActivity"
             android:exported="false" />
         <activity
